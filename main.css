@@ -17,6 +17,10 @@ img{
     display: block;
 }
 
+button{
+    cursor: pointer;
+}
+
 .list{
     margin: 0;
     padding: 0;
@@ -214,4 +218,83 @@ header .container{
 
 .about-img{
     border-radius: 15px;
+    width: 445px;
+    height: 311px;
 }
+/* ABOUT US */
+
+/* FEATURES */
+.features{
+    padding: 63px 0 229px;
+    background-color: #FAFAFA;
+    text-align: center;
+    color: var(--black);
+}
+
+.features .section-title{
+    margin-bottom: 75px;
+}
+
+.features-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.features-list li{
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.features-card-1{
+    background-image: url("./img/features-1.jpg");
+}
+.features-card-2 {
+    background-image: url("./img/features-2.jpg");
+}
+.features-card-3 {
+    background-image: url("./img/features-3.jpg");
+}
+
+.features-info{
+    position: absolute;
+    top: 157px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 293px;
+    height: 198px;
+    padding: 33px 32px 25px;
+
+    transform: translateX(-50%);
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+}
+
+.features-card-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.features-card-text{
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.features-card-link{
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+/* FEATURES */
