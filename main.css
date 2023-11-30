@@ -13,6 +13,10 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 0;
 }
 
+img{
+    display: block;
+}
+
 .list{
     margin: 0;
     padding: 0;
@@ -22,6 +26,13 @@ h1,h2,h3,h4,h5,h6,p{
 .container{
     width: 1110px;
     margin: 0 auto;
+}
+
+.section-title{
+    color: var(--black);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
 }
 
 /* HEADER */
@@ -105,7 +116,7 @@ header .container{
 /* HERO */
 
 .hero{
-    padding: 119px 0 187px;
+    padding: 132px 0 187px;
     color: var(--white);
     text-align: center;
 }
@@ -157,4 +168,50 @@ header .container{
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+}
+/* HERO */
+
+/* ABOUT US */
+.about{
+    padding: 94px 0;
+}
+
+.about .container{
+    display: flex;
+    gap: 125px;
+}
+
+.about .section-title{
+    margin-bottom: 24px;
+}
+
+.about-text{
+    color: #000;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 140%;
+    max-width: 445px;
+    margin-bottom: 18px;
+}
+
+.about-link{
+    color: var(--pink);
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.about-video-wrapper{
+    position: relative;
+}
+
+.about-icon{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+}
+
+.about-img{
+    border-radius: 15px;
 }
