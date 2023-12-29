@@ -30,11 +30,19 @@
             CloudBudget
           </a>
           <ul class="nav-list list">
-            <li class="nav-item"><a class="nav-link" href="">overview </a></li>
-            <li class="nav-item"><a class="nav-link" href="">features </a></li>
-            <li class="nav-item"><a class="nav-link" href="">technology</a></li>
-            <li class="nav-item"><a class="nav-link" href="">contact </a></li>
-            <li class="nav-item"><a class="nav-link" href="">sign up </a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">overview </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features"> features </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#technology"> technology </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">sign up </a></li>
           </ul>
           <button class="burger-btn" type="button">
             <svg class="burger-icon">
@@ -57,19 +65,23 @@
           </button>
           <ul class="menu-nav-list list">
             <li class="menu-nav-item">
-              <a class="nav-link" href="">overview </a>
+              <a class="nav-link" href="#about" data-link="menu">overview </a>
             </li>
             <li class="menu-nav-item">
-              <a class="nav-link" href="">features </a>
+              <a class="nav-link" href="#features" data-link="menu"
+                >features
+              </a>
             </li>
             <li class="menu-nav-item">
-              <a class="nav-link" href="">technology</a>
+              <a class="nav-link" href="#technology" data-link="menu"
+                >technology</a
+              >
             </li>
             <li class="menu-nav-item">
-              <a class="nav-link" href="">contact </a>
+              <a class="nav-link" href="#contact" data-link="menu">contact </a>
             </li>
             <li class="menu-nav-item">
-              <a class="nav-link" href="">sign up </a>
+              <a class="nav-link" href="#">sign up </a>
             </li>
           </ul>
           <button class="menu-login-btn" type="button">login</button>
@@ -94,7 +106,7 @@
         </div>
         <div class="bg-box"></div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about-info-wrapper">
             <h2 class="section-title">
@@ -121,7 +133,7 @@
           </div>
         </div>
       </section>
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <h2 class="section-title">Features</h2>
           <ul class="features-list list">
@@ -163,7 +175,7 @@
           </ul>
         </div>
       </section>
-      <section class="technology">
+      <section class="technology" id="technology">
         <div class="container">
           <h2 class="section-title">Technology</h2>
           <ul class="technology-list list">
@@ -260,7 +272,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="contact-wrapper">
             <h2 class="section-title">Contact</h2>
@@ -317,7 +329,10 @@
       <div class="container">
         <div class="footer-address">
           <h3 class="footer-address-title">Address</h3>
-          <a class="footer-address-link" href="">
+          <a
+            class="footer-address-link"
+            href="https://www.google.com/maps/search/USA+Georgiou+Griva+Digeni+81/@34.6913317,33.0588509,17z/data=!3m1!4b1?entry=ttu"
+          >
             Pipang Ltd, Griva Digeni,<br />
             81-83 Jacovides Tower, 1st Floor 1090 Picosia USA
           </a>
@@ -326,13 +341,13 @@
           <h3 class="footer-srvices-title">Services</h3>
           <ul class="footer-services-list list">
             <li class="footer-services-item">
-              <a class="footer-services-link" href="#">Overview </a>
+              <a class="footer-services-link" href="#about">Overview </a>
             </li>
             <li class="footer-services-item">
-              <a class="footer-services-link" href="#">Features </a>
+              <a class="footer-services-link" href="#features">Features </a>
             </li>
             <li class="footer-services-item">
-              <a class="footer-services-link" href="#">Technology </a>
+              <a class="footer-services-link" href="#technology">Technology </a>
             </li>
             <li class="footer-services-item">
               <a class="footer-services-link" href="#">Terms & Conditions</a>
@@ -358,21 +373,21 @@
           </ul>
           <ul class="footer-social-list list">
             <li>
-              <a class="footer-social-link" href="">
+              <a class="footer-social-link" href="https://www.facebook.com/">
                 <svg class="footer-social-icon">
                   <use href="./img/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="footer-social-link" href="">
+              <a class="footer-social-link" href="https://www.linkedin.com/">
                 <svg class="footer-social-icon">
                   <use href="./img/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="footer-social-link" href="">
+              <a class="footer-social-link" href="https://twitter.com/">
                 <svg class="footer-social-icon">
                   <use href="./img/icons.svg#icon-twitter"></use>
                 </svg>

@@ -5,19 +5,26 @@ const selService = document.querySelector(".form-selected-service");
 const servicesList = document.querySelector(".form-services-list");
 
 const userForm = document.querySelector(".contact-form");
-const userInfo = {}
+const userInfo = {};
 
-const closeMenuOnClick = () => {
-    menu.classList.remove("menu-active");
-    closeMenuBtn.removeEventListener("click", closeMenuOnClick);
-    }
-
-const openMenuOnClick = () => {
-    menu.classList.add("menu-active");
-    closeMenuBtn.addEventListener("click", closeMenuOnClick);
+const menuOnClick = event => {
+  if (event.target.dataset.link) menu.classList.remove("menu-active");
+  menu.removeEventListener("click", menuOnClick);
 }
 
-openMenuBtn.addEventListener("click", openMenuOnClick)
+const closeMenuOnClick = () => {
+  menu.classList.remove("menu-active");
+  closeMenuBtn.removeEventListener("click", closeMenuOnClick);
+}
+
+const openMenuOnClick = () => {
+  menu.classList.add("menu-active");
+  closeMenuBtn.addEventListener("click", closeMenuOnClick);
+  menu.addEventListener("click", menuOnClick);
+}
+
+openMenuBtn.addEventListener("click", openMenuOnClick);
+
 
 
 
