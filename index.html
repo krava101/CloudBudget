@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header>
@@ -36,6 +36,11 @@
             <li class="nav-item"><a class="nav-link" href="">contact </a></li>
             <li class="nav-item"><a class="nav-link" href="">sign up </a></li>
           </ul>
+          <button class="burger-btn" type="button">
+            <svg class="burger-icon">
+              <use href="./img/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
         </nav>
         <div class="switch-lang">
           <svg class="switch-lang-icon">
@@ -44,6 +49,37 @@
           EN
         </div>
         <button class="login-btn" type="button">login</button>
+        <div class="menu">
+          <button class="close-menu-btn" type="button">
+            <svg class="close-menu-icon">
+              <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="menu-nav-list list">
+            <li class="menu-nav-item">
+              <a class="nav-link" href="">overview </a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="">features </a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="">technology</a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="">contact </a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="">sign up </a>
+            </li>
+          </ul>
+          <button class="menu-login-btn" type="button">login</button>
+          <div class="menu-switch-lang">
+            <svg class="switch-lang-icon">
+              <use href="./img/icons.svg#icon-usa"></use>
+            </svg>
+            EN
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -73,7 +109,7 @@
             </p>
             <a class="about-link" href="">Learn More</a>
           </div>
-          <span class="about-video-wrapper">
+          <div class="about-video-wrapper">
             <svg class="about-icon">
               <use href="./img/icons.svg#icon-play"></use>
             </svg>
@@ -82,7 +118,7 @@
               src="./img/about-bg.jpg"
               alt="Video about us"
             />
-          </span>
+          </div>
         </div>
       </section>
       <section class="features">
@@ -194,21 +230,21 @@
             </p>
             <ul class="app-list list">
               <li>
-                <a href="">
+                <a href="" class="app-list-link">
                   <svg class="app-icon">
                     <use href="./img/icons.svg#icon-playstore"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="" class="app-list-link">
                   <svg class="app-icon">
                     <use href="./img/icons.svg#icon-appstore"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="" class="app-list-link">
                   <svg class="app-icon">
                     <use href="./img/icons.svg#icon-windows"></use>
                   </svg>
@@ -230,7 +266,7 @@
             <h2 class="section-title">Contact</h2>
             <p class="contact-text">
               Questions or concerns? Just fill out the form below and our
-              support team will get back to you within 24 hours
+              support team will get back to you within 24 hours.
             </p>
           </div>
           <form class="contact-form" action="">
@@ -238,28 +274,40 @@
               <input
                 class="form-first-name"
                 type="text"
-                name="user_first_name"
+                name="userFirstName"
                 placeholder="First Name"
+                required
               />
               <input
                 class="form-last-name"
                 type="text"
-                name="user_last_name"
+                name="userLastName"
                 placeholder="Last Name"
+                required
               />
             </div>
             <input
               class="form-tel"
               type="tel"
-              name="user_tel"
+              name="userTel"
               placeholder="Phone Number"
+              required
             />
-            <input
-              class="form-service"
-              type="text"
-              name="user_service"
-              placeholder="Select Service"
-            />
+            <div class="form-services-wrapper">
+              <input
+                type="text"
+                class="form-selected-service"
+                name="userSelectedService"
+                placeholder="Select Service"
+                readonly
+              />
+              <ul class="form-services-list list">
+                <li class="form-select-item">Secure</li>
+                <li class="form-select-item">Cloud Storage</li>
+                <li class="form-select-item">PDF Download</li>
+                <li class="form-select-item">CSV Download</li>
+              </ul>
+            </div>
             <button class="form-btn" type="submit">submit now</button>
           </form>
         </div>
@@ -334,10 +382,14 @@
         </div>
         <div class="support">
           <h3 class="support-title">We Support</h3>
-          <a href="#"><img src="./img/payments.png" alt="Payments" /></a>
+          <a href="#"
+            ><img src="./img/payments-1.png" alt="Payments" />
+            <img src="./img/payments-2.png" alt="Payments"
+          /></a>
         </div>
         <p class="copyright">Copyright 2023 CloudBudget</p>
       </div>
     </footer>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
