@@ -11,6 +11,7 @@ body {
     --pink: #D52047;
     --light-pink: #ED4C5C;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -121,13 +122,16 @@ header .container{
 }
 
 .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 40px;
-    background-color: #ed4c5c;
+    background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.80) 0%, rgba(238, 61, 27, 0.80) 100%), linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%);
     z-index: 9999;
 
     pointer-events: none;
@@ -161,17 +165,19 @@ header .container{
     flex-direction: column;
     gap: 15px;
     margin-bottom: 40px;
+    z-index: 99999;
 }
 
 .menu .nav-link {
     color: var(--white);
     font-size: 24px;
     line-height: normal;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
 }
 
 .menu-switch-lang{
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 11px;
@@ -179,6 +185,7 @@ header .container{
     color: var(--white);
     font-size: 18px;
     text-transform: uppercase;
+    z-index: 99999;
 }
 
 .switch-lang-icon{
@@ -186,28 +193,91 @@ header .container{
     height: 32px;
 }
 
-.menu-login-btn {
+.menu-btns-wrapper{
+    display: flex;
+    justify-content: space-around;
+    z-index: 99999;
+}
+
+.menu-btn {
     min-width: 100px;
     height: 40px;
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 6px;
-    border: 1px solid var(--white);
+    border: 0.1em solid var(--pink);
     outline: none;
 
-    color: var(--white);
+    color: var(--pink);
     text-align: center;
     font-size: 14px;
     line-height: 0;
     text-transform: uppercase;
-    margin-bottom: 20px;
     transition: color .25s ease-in-out, background-color .25s ease-in-out;
 }
 
-.menu-login-btn:hover,
-.menu-login-btn:focus {
-    background-color: var(--white);
-    color: rgb(235, 54, 41);
+.menu-btn:hover,
+.menu-btn:focus {
+    background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.80) 0%, rgba(238, 61, 27, 0.80) 100%), linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%);
+    color: #fff;
 }
+
+.cloud{
+    position: absolute;
+    bottom: -20px;
+    left: 36%;
+    transform: translate(-50%);
+    min-width: 320px;
+    max-width: 100%;
+    height: 200px;
+    z-index: 99991;
+}
+
+.cloud-1{
+    position: absolute;
+    right: -50px;
+    width: 78%;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 1px 15px rgba(157, 50, 50, 0.5);
+    border-top: 7px solid #ebe9e9;
+    border-left: 2px solid #ebe9e9;
+}
+
+.cloud-2{
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-top: 3px solid #ebe9e9;
+    border-left: 4px solid #ebe9e9;
+}
+
+.cloud-3{
+    position: absolute;
+    left: -40px;
+    bottom: -120px;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-top: 5px solid #f6f5f5;
+}
+
+.cloud-4{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -220px;
+    bottom: -150px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-top: 5px solid #f6f5f5;
+}
+
 
 /* HERO */
 
