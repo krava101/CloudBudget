@@ -57,51 +57,6 @@
           EN
         </div>
         <button class="login-btn" type="button">login</button>
-        <div class="menu">
-          <button class="close-menu-btn" type="button">
-            <svg class="close-menu-icon">
-              <use href="./img/icons.svg#icon-close"></use>
-            </svg>
-          </button>
-          <div>
-            <ul class="menu-nav-list list">
-              <li class="menu-nav-item">
-                <a class="nav-link" href="#about" data-link="menu">overview </a>
-              </li>
-              <li class="menu-nav-item">
-                <a class="nav-link" href="#features" data-link="menu"
-                  >features
-                </a>
-              </li>
-              <li class="menu-nav-item">
-                <a class="nav-link" href="#technology" data-link="menu"
-                  >technology</a
-                >
-              </li>
-              <li class="menu-nav-item">
-                <a class="nav-link" href="#contact" data-link="menu"
-                  >contact
-                </a>
-              </li>
-            </ul>
-            <div class="menu-switch-lang">
-              <svg class="switch-lang-icon">
-                <use href="./img/icons.svg#icon-usa"></use>
-              </svg>
-              EN
-            </div>
-          </div>
-          <div class="menu-btns-wrapper">
-            <button class="menu-btn" type="button">sign up</button>
-            <button class="menu-btn" type="button">log in</button>
-          </div>
-          <div class="cloud">
-            <div class="cloud-1"></div>
-            <div class="cloud-2"></div>
-            <div class="cloud-3"></div>
-            <div class="cloud-4"></div>
-          </div>
-        </div>
       </div>
     </header>
     <main>
@@ -128,8 +83,8 @@
               income and expense reports with graphs so you can easilly see your
               spending patterns and budget at a glance. Read below to find out
               more.
+              <a class="about-link" href="">Learn More</a>
             </p>
-            <a class="about-link" href="">Learn More</a>
           </div>
           <div class="about-video-wrapper">
             <svg class="about-icon">
@@ -308,27 +263,29 @@
                 required
               />
             </div>
-            <input
-              class="form-tel"
-              type="tel"
-              name="userTel"
-              placeholder="Phone Number"
-              required
-            />
-            <div class="form-services-wrapper">
+            <div class="form-tel-services-wrapper">
               <input
-                type="text"
-                class="form-selected-service"
-                name="userSelectedService"
-                placeholder="Select Service"
-                readonly
+                class="form-tel"
+                type="tel"
+                name="userTel"
+                placeholder="Phone Number"
+                required
               />
-              <ul class="form-services-list list">
-                <li class="form-select-item">Secure</li>
-                <li class="form-select-item">Cloud Storage</li>
-                <li class="form-select-item">PDF Download</li>
-                <li class="form-select-item">CSV Download</li>
-              </ul>
+              <div class="form-services-wrapper">
+                <input
+                  type="text"
+                  class="form-selected-service"
+                  name="userSelectedService"
+                  placeholder="Select Service"
+                  readonly
+                />
+                <ul class="form-services-list list">
+                  <li class="form-select-item">Secure</li>
+                  <li class="form-select-item">Cloud Storage</li>
+                  <li class="form-select-item">PDF Download</li>
+                  <li class="form-select-item">CSV Download</li>
+                </ul>
+              </div>
             </div>
             <button class="form-btn" type="submit">submit now</button>
           </form>
@@ -415,6 +372,51 @@
         <p class="copyright">Copyright 2023 CloudBudget</p>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="menu">
+        <button class="close-menu-btn" type="button">
+          <svg class="close-menu-icon">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="menu-nav-list list">
+            <li class="menu-nav-item">
+              <a class="nav-link" href="#about" data-link="menu">overview </a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="#features" data-link="menu"
+                >features
+              </a>
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="#technology" data-link="menu"
+                >technology</a
+              >
+            </li>
+            <li class="menu-nav-item">
+              <a class="nav-link" href="#contact" data-link="menu">contact </a>
+            </li>
+          </ul>
+          <div class="menu-switch-lang">
+            <svg class="switch-lang-icon">
+              <use href="./img/icons.svg#icon-usa"></use>
+            </svg>
+            EN
+          </div>
+        </div>
+        <div class="menu-btns-wrapper">
+          <button class="menu-btn" type="button">sign up</button>
+          <button class="menu-btn" type="button">log in</button>
+        </div>
+        <div class="cloud">
+          <div class="cloud-1"></div>
+          <div class="cloud-2"></div>
+          <div class="cloud-3"></div>
+          <div class="cloud-4"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
