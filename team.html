@@ -1,0 +1,404 @@
+<!-- QUOTE -->
+
+<!-- <section class="quote">
+  <div class="quote-container">
+    <div class="quote-wrapper">
+      <p class="quote-title">Quote of the day</p>
+      <p class="quote-text">
+        A lot of times I find that people who are blessed with the most talent don't ever develop that attitude, and the ones who aren't blessed in that way are the most competitive and have the biggest heart.
+      </p>
+      <p class="quote-author">Tom Brady</p>
+      <span class="quote-icon">
+        <svg>
+          <use href="../images/icon.svg#icon-man"></use>
+        </svg>
+      </span>
+      <svg class="quote-commas-icon">
+          <use href="../images/icon.svg#icon-commas"></use>
+        </svg>
+    </div>
+    <img
+      class="quote-img"
+      src="../images/quote-imgs/quote-mobile.png"
+      alt="Athletic girl"
+    />
+  </div>
+</section> -->
+
+<!-- .quote {
+  margin: 20px 0;
+}
+
+.quote-container {
+  max-width: 335px;
+  margin: 0 auto;
+}
+
+.quote-wrapper {
+  position: relative;
+  max-width: 100%;
+  border-radius: 30px;
+  padding: 42px 20px 40px 66px;
+  background-color: #7e847f;
+}
+
+.quote-title {
+  color: var(--white-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'DM Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.quote-text {
+  color: var(--white-color);
+  font-family: 'DM Sans';
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.285;
+  opacity: 0.6;
+}
+
+.quote-author {
+  color: var(--white-color);
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(246, 246, 246, 0.1);
+  fill: var(--white-color);
+}
+
+.quote-icon svg {
+  width: 20px;
+  height: 18px;
+}
+
+.quote-commas-icon {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  fill: var(--white-color);
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .quote-img {
+    content: url('../images/quote-imgs/quote-mobile@2x.png');
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 736px) {
+  .quote {
+    margin: 16px 0;
+  }
+
+  .quote-container {
+    max-width: 736px;
+  }
+
+  .quote-img {
+    content: url('../images/quote-imgs/quote-tablet.png');
+    border-radius: 50px;
+  }
+
+  .quote-wrapper {
+    border-radius: 50px;
+    padding: 64px 80px 64px 130px;
+  }
+
+  .quote-title {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .quote-icon {
+    top: 64px;
+    left: 80px;
+  }
+
+  .quote-commas-icon {
+    top: 32px;
+    right: 80px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 736px) and (min-resolution: 192dpi) {
+  .quote-img {
+    content: url('../images/quote-imgs/quote-tablet@2x.png');
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .quote-container {
+    max-width: 1408px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quote-img {
+    content: url('../images/quote-imgs/quote-desktop.png');
+    width: calc(100% / 2);
+    height: auto;
+  }
+
+  .quote-wrapper{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .quote-img {
+    content: url('../images/quote-imgs/quote-desktop@2x.png');
+  }
+} -->
+
+<!-- import * as api from './api.js';
+
+const quoteText = document.querySelector('.quote-text');
+const quoteAuthor = document.querySelector('.quote-author');
+// const getSavedQuote = JSON.parse(localStorage.getItem('QOUTE_INFO'));
+
+// const quoteInfo = {
+//   quote: `A lot of times I find that people who are blessed with the most talent don't ever develop that attitude, and the ones who aren't blessed in that way are the most competitive and have the biggest heart.`,
+//   author: 'Tom Brady',
+//   date: new Date().getDate(),
+// };
+
+// if (getSavedQuote && getSavedQuote.date == new Date().getDate()) {
+//   const parsedQuote = JSON.parse(localStorage.getItem('QOUTE_INFO'));
+//   quoteText.textContent = parsedQuote.quote;
+//   quoteAuthor.textContent = parsedQuote.author;
+// } else {
+//   fetchQuote();
+// }
+
+// function fetchQuote() {
+//   api
+//     .getQuote()
+//     .then(quote => saveQuoteInfo(quote))
+//     .catch(error => console.error(error));
+// }
+
+// function saveQuoteInfo(quote) {
+//   quoteInfo.quote = quote.quote;
+//   quoteInfo.author = quote.author;
+//   quoteInfo.date = new Date().getDate();
+//   localStorage.setItem('QOUTE_INFO', JSON.stringify(quoteInfo));
+// }
+
+const quoteInfo = {
+  quote: '',
+  author: '',
+  date: 0,
+};
+
+const getDataFromLS = JSON.parse(localStorage.getItem('QUOTE_INFO'));
+
+if (getDataFromLS && getDataFromLS.date != new Date().getDay()) {
+  quoteText.textContent = getDataFromLS.quote;
+  quoteAuthor.textContent = getDataFromLS.author;
+} else {
+  fetchQuote();
+}
+
+function fetchQuote() {
+  api
+    .getQuote()
+    .then(newQuote => saveQuote(newQuote))
+    .catch(error => console.log(error));
+}
+
+function saveQuote(newQuote) {
+  quoteInfo.quote = newQuote.quote;
+  quoteInfo.author = newQuote.author;
+  quoteInfo.date = new Date().getDay();
+  localStorage.setItem('QUOTE_INFO', JSON.stringify(quoteInfo));
+} -->
+
+<!-- 110 min -->
+
+<!-- <section class="min-110">
+  <div class="min-110-container">
+    <img
+      class="min-110-img"
+      src="../images/110-min-imgs/110min-mobile.png"
+      alt="Athletic girl"
+    />
+    <div class="min-110-wrapper">
+      <p class="min-110-title">110 min</p>
+      <p class="min-110-norm">Daily norm of sports</p>
+      <p class="min-110-text">
+        The World Health Organization recommends at least 150 minutes of moderate-intensity aerobic physical activity throughout the week for adults aged 18-64. However, what happens if we adjust that number to 110 minutes every day? 
+      </p>
+      <span class="min-110-icon">
+        <svg>
+          <use href="../images/icon.svg#icon-dumbbell"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+</section> -->
+
+<!-- .min-110 {
+  margin: 20px 0;
+}
+
+.min-110-container {
+  max-width: 335px;
+  margin: 0 auto;
+}
+
+.min-110-wrapper {
+  position: relative;
+  background-color: var(--black-color);
+  padding: 40px 20px 40px 70px;
+  border-radius: 30px;
+}
+
+.min-110-title {
+  color: var(--white-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'DM Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.min-110-norm {
+  color: var(--white-color);
+  font-family: 'DM Sans';
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.28;
+  opacity: 0.6;
+}
+
+.min-110-text {
+  color: var(--white-color);
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.285;
+  opacity: 0.6;
+  margin-top: 15px;
+}
+
+.min-110-icon {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: rgba(246, 246, 246, 0.1);
+}
+
+.min-110-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-color);
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .min-110-img {
+    content: url('../images/110-min-imgs/110min-mobile@2x.png');
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 736px) {
+  .min-110 {
+    margin: 16px 0;
+  }
+
+  .min-110-container {
+    max-width: 736px;
+  }
+
+  .min-110-img {
+    content: url('../images/110-min-imgs/110min-tablet.png');
+  }
+
+  .min-110-wrapper {
+    padding: 64px 96px 64px 114px;
+    border-radius: 50px;
+  }
+
+  .min-110-title {
+    font-size: 24px;
+    line-height: 1.333;
+  }
+
+  .min-110-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 26px;
+  }
+
+  .min-110-icon {
+    top: 65px;
+    left: 64px;
+  }
+}
+
+@media screen and (min-width: 736px) and (min-resolution: 192dpi) {
+  .min-110-img {
+    content: url('../images/110-min-imgs/110min-tablet@2x.png');
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .min-110-container {
+    max-width: 1408px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .min-110-img {
+    content: url('../images/110-min-imgs/110min-desktop.png');
+    width: calc(100% / 2);
+    height: auto;
+  }
+
+  .min-110-wrapper {
+    padding: 64px 64px 64px 114px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .min-110-img {
+    content: url('../images/110-min-imgs/110min-desktop@2x.png');
+  }
+} -->
